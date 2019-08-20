@@ -1,0 +1,471 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf500
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Fausty  \
+Greetings, fellow zoos, and welcome to another New Moon episode of Zooier Than Thou. I'm Chief Executive dog Mongler Fausty.\
+\
+Toggle Rat  \
+And I'm Vice President of -- (laughter)\
+\
+Fausty  \
+Ha, you couldn't get through one fucking line! You loser! You're supposed to be the professional here! Mickey Mouse mother fucker!\
+\
+Toggle Rat  \
+I know, I'm Vice President of Mickey Mouse motherfuckers, Toggle.\
+\
+Fausty  \
+You sure are, aren't you?\
+\
+Toggle Rat  \
+Fuck you!\
+\
+Fausty  \
+ And we'll--- and will be your hosts for this evening.\
+\
+Toggle Rat  \
+So this episode... So this episode, we're-- (laughter)\
+\
+Fausty  \
+Three words in! Oh, we're trying something different, alright, and it's going great so far.\
+\
+Toggle Rat  \
+So this episode we're going to try something different. I generally insist on having a script because I like to keep things concise and impactful and because I'm really bad at speaking in public without prepared material, but Fausty's more of an off the cuff sort of person. So we're going to experiment with a less scripted format this evening. We'll have an outline with a few notes. But otherwise, we're going off book. So if things go off the rails, just blame it on Fausty like I do.\
+\
+Fausty  \
+Wow, that's really nothing different, but thank you.\
+\
+Toggle Rat  \
+So I guess we should start by addressing the weird website issues we've been having?\
+\
+Fausty  \
+Well, since it's my job to keep the website running. I'm the one who should probably address this primarily. Yeah, as folks who spend time doing such things may have noticed last weekend, our Zoo.WTF website disappeared. This was not actually an exciting consequence of complicated high end technical battles taking place behind the scenes.\
+\
+Toggle Rat  \
+ I mean, but you can imagine that it was, that would be fine.\
+\
+Fausty  \
+You can think about it like that. Because it's a lot sexier than the reality. And it would have been a lot more exciting to be participating in something fun like that, instead of what actually happened, which was just human error. And the kind of thing that does happen with technology, our hosting company, in trying to issue us a refund for some poor performance t he website was having due to heavier than expected traffic, accidentally deleted our entire hosting account while issuing the refund of money to us. \
+\
+Toggle Rat  \
+Yeah, whoops. \
+\
+Fausty  \
+Whoops. Indeed. \
+\
+Toggle Rat  \
+They, they put the delete button right next to the refund button. Yeah\
+\
+Fausty  \
+I can actually see that happening. And I don't really blame them at all for that, because I've done far stupider things in my technology career as anybody who's ever worked with me can certainly confirm. However, they did not actually then just come to us and tell us that this had happened. Instead, our monitoring service quickly noticed that our website was throwing 404's for every request. And I got back in touch late Saturday night with tech support they ran us in circles for half an hour. acting as if this was a whole complete surprise. Wow, 404's, I have no idea what could possibly be wrong. Give us a few minutes to check into this. And we'll do an in depth technical analysis to see what happened. Meanwhile, they they knew they pushed the delete button the whole time. It was a pretty straightforward, mistake. And and it happens. It's not a big deal, the half an hour of pretending like they didn't understand what was happening until somebody finally came clean and said, Okay, look, dude, here's what really happened. I was processing your refund, and I accidentally deleted your account. And I'm really sorry about it. So then they continue. Fortunately, you'll have backups available. And we can just immediately reload the site from your backups because you're a technology person and certainly understand the importance of maintaining current backups.\
+\
+Toggle Rat  \
+Of course I do! I have a backup right here!\
+\
+Fausty  \
+Right. This is where things go from, vaguely interesting to sort of frustrating to profoundly tragic. So it turns out that yours truly has a backup, in the sense of a file I generated -- God knows how, cuz I don't know how I did it -- a month ago, that is an XML metadata description of what the website used to be. Which is the same thing as a backup, in the same way as describing the car in your driveway would actually be something you could drive to work. It's not a backup at all. It's more like a moment of nostalgia, remembering how nice the website used to be.\
+\
+Toggle Rat  \
+It's really funny now. We're laughing. But we were not --\
+\
+Fausty  \
+there's no laughter at all there was there was no joy. Not even a little bit. I mean, there's a sort of cascading series of realizations, the first realization of my God, they deleted our whole account, it is 11 o'clock on Saturday night. And I really don't want to be doing this right now. Then the realization that my backup is a month old, which in and of itself was embarrassing, because that's -- how am I gonna explain that for Toggle with my, you know, insistence that everybody maintain current backups has resulted in me not maintaining current backups, then seeing the like 15 kilobyte XML descriptor file that was masquerading as a backup, which I still have no idea how I generated that God damn thing, then it's tragedy, because you realize that about two o'clock on Sunday morning that you have no backup really at all to speak of other than this sort of wispy recollection of a site that used to exist. So after much frustration, and an enormous amount of really impressive work on behalf of the tech support team at our hosting company, it took a couple days, but they were in fact able to go back into their own archival materials, and pull out a routine virtual machine snapshot of our entire instance, not just a website, but the whole application framework that supports it inside the little VM that we run it in, that was current up till the day of the accidental deletion, and wasn't just an XML file, it was a real backup.\
+\
+Toggle Rat  \
+I really have to say like getting to that point was such a struggle. Like,\
+\
+Fausty  \
+okay, that's true. Yeah, yeah, that is true. That was like two plus days of, because initially, some of the more junior folks were really hemming and hawing about whether a backup of the VM existed. And I was really confident that anybody running a hosting infrastructure of any size that is doing hosted platforms is going to be snapshoting those things routinely, that's just so it's so easy to do. And so obviously, something you need to have, in case something like this happens so your customers don't go absolutely crazy if your website vanishes for some reason or another. Like someone deleting it, excuse me. And so early on I just what this was a holiday weekend, this was Memorial Day in the States. And that didn't help. And I kept telling the junior folks look, just get in touch with somebody a little more senior, I know they have an image of this. And and really with whatever virtualization framework you guys were using, recovering a VM image from backup is a three minute process. It really is nowadays, just a click, click a button, or two lines in Terminal. And and you've reinstantiated, it is the most -- one of the more spectacular side effects of virtualized infrastructure. The backups are so easy to maintain and to implement when things go wrong. snapshoting and all that stuff. And it really took two days to get to a senior enough level for somebody to go, "Oh, yeah, sure. Yeah, we keep backup images right here. Let me get it for you. All right there, it's good." It was two days worth of just running in circles to get to that level. And that was not much fun. In the meantime, I had dumped my ephemeral, tenuous, conceptual metadata, XML based recollection of a website, on Toggle and told him make a temporary website with this. So when people come in the meantime, there's something at least other than just XML descriptors of what used to be there.\
+\
+Toggle Rat  \
+Right.\
+\
+Fausty  \
+ So Toggle spend a good chunk of his holiday weekend, reconstructing a website that he already built, because his stupid cohost didn't have a current backup, knowing that that was going to get thrown out. Because eventually you were going to actually back up from a proper snapshot.\
+\
+Toggle Rat  \
+It was not that big a deal.  I didn't mind doing it, but man, Fausty, he was so frustrated, I felt so bad.\
+\
+Fausty  \
+There were times when I was not at my best. And I did get repetitive with it with the tech support staff. Every eight hours, of course, the staff would go off and new folks come back on to shift. I don't have anybody on my shifts. It's just me. And I would start all over again. So dear hosting customer, what can I help you with? Oh, God, I can't. I have to say this from ground zero all the way again. And we just it was like, you know, Groundhog Day over and over and over. And they were so apologetic, and it got to the point where they've been starting to, we really appreciate your patience. And I would just say stop this. No, please don't say that anymore. Because that patience is just so thin now. And they were great. And they were they were in fact patient with me even when I was a bit of a crybaby. And we did within 48 hours, get the instance, recovered fully from a VM. There were some minor permissions issues that we had to work through the next day. But by and large, it was exactly what I had hoped would happen push the button, it came back to where it was and everything was fine. \
+\
+Toggle Rat  \
+So it's back. The RSS feed is back. Oh, everything is back. So\
+\
+Toggle Rat  \
+Well, true, but it different -- it was different. It changed and only had, it didn't have 2.5 for some reason.\
+\
+Fausty  \
+technically, the RSS feed never actually went away. Interesting technical fact.\
+\
+Fausty  \
+Fair enough. There were maybe some holes in it. I'm proud of the fact that that RSS feed is done via a DNS redirect. So even though we deleted our website, we didn't actually delete all of our DNS files. Knock on wood. Our DNS zone files did not disappear. That will be probably next weekend's -- \
+\
+Toggle Rat  \
+Right. Get ready!\
+\
+Fausty  \
+Meanwhile, we have burned dozens of copies of backups of the website now. Yeah, stash them all over hell and back in when the website goes down. Yeah, we have them all, you know, under the cushions on the sofa. I think there's a USB drive with a backup of zoo dot WTF. Yeah, there it's encoded in like half a dozen different blockchains at this point out there somewhere. So we will never again be where we don't have a backup of the website. We do apologize to everybody who was trying to visit the website over that holiday weekend. And getting anything from a 404 to weird halfway complete versions of the website that nobody really understood why they were halfway complete. That was all my fault, just top to bottom. So that rests on my shoulders. I should have done better. I know I should have done better. And I just dropped the ball. So that's that's one of those things where we make mistakes, even though we know better. And I did and I will make sure that particular mistake does not happen.\
+\
+Toggle Rat  \
+All right. Well, let's jump into the mailbag because we've got a lot of good ones. First up, this one is from Dog Park Princess. And she has an important correction for Episode Three here. The Princess writes: Hello. And I would like to begin by saying that I really enjoyed the show. I don't typically listen to podcasts, but when I found out there was one about the zoo community, I went ahead and listened to all the episodes right in a row. I find the show both entertaining and thought provoking and really enjoy the mix of satire as well as serious subject matter. It keeps things fresh and interesting. So first of all, thank you. I'm glad you're enjoying it. Now, Fausty, in this outline anytime there's double spaces, if you want to comment, you certainly can. \
+\
+Fausty  \
+I don't see double spaces.\
+\
+Toggle Rat  \
+Oh, well mine's double spaced. \
+\
+Fausty  \
+I probably lost the super secret encoding of double spaces when I ran your RTF through whatever filters exist on my local machine. And consequently, I had no idea that I was supposed to be interjecting thought provoking and useful commentary along the way I will make sure to do that. I will impute double spaces and imagine that I have such commentary to provide and I will do so forthwith. I have no idea what I'm going to say, but... holy shit, what am I going to say? "Entertaining serious subject matter. It keeps things refreshing and interesting." That all sounds like a really great podcast, I am surprised that it is being used as a description for what we're doing, but I'm not going to complain. So that sounds wonderful. And maybe someday we'll actually meet that standard. That's where I'm shooting for, yeah. \
+\
+Toggle Rat  \
+So one of these days. \
+\
+Fausty  \
+One of these days.\
+\
+Toggle Rat  \
+I would also like to make one minor correction about a statement made by Toggle in episode three "our best selves." After discussing the many knotty canine sheaths your show recommended using silicone lube. However, all the toys such as the bad dragon sheaths and the fetish zone sheaths are all made from silicone themselves. And when you use silicon lube on a silicon toy, it actually causes a reaction which can basically melt the toy in extreme cases. And even in minor cases it causes chemicals to leak from them. This is actually correct. Silicone toys, silicone lube, you don't combine them. So you really have to be careful with your toys and the silicone lube. But it's super important. You don't use water based lube. A water base lube is not good for this sort of thing. And if you insist on using silicone based what I always do with my toys, that I stick my butt, I put a condom on them.\
+\
+Fausty  \
+Too much information. Didn't need to hear that. But thank you for sharing.\
+\
+Toggle Rat  \
+Yeah, yeah, you can put a condom on them. And then you can use a condom safe silicone lube, like Gun Oil is a good one. And those will protect your toys from being messed up. So that's one option,\
+\
+Fausty  \
+your your mention of you and your toys is just reminding me of who you are not actually, and I think you will remember from earlier this evening, as we were preparing the podcast, I just want to remind you that you're as far from a particular individual, as you can really get and that that image of you and your toys is to take you even further away from who I really wish you were. So thank you for that.\
+\
+Toggle Rat  \
+Haha! What the fuck?\
+\
+Fausty  \
+I mean, you could have you could have at least I don't know, done something to make it seem just a little bit like maybe you were him and not you. And that would have made my life a lot better. And that's really what it's all about, really, at this point. But you did not do that. And I suppose I'll just have to live with it. So I have a really great story to share that follows from the references in the paragraph that you just read from this really neat email we received. However, this the story impinges on the privacy of a number of individuals, and as such, not only can I not tell the story, I cannot tell why I cannot tell the story, which leaves me to say that story is really awesome. And, boy, it's too bad that nobody gets to share it probably forever. Because if you could you would think it was really great to, so that's no, no use at all, really to anybody, except to say that there's a often a lot more behind the scenes than what you see on the surface. And sometimes what is behind the scenes is actually really neat, and the world is not always a terrible place. So there you go.\
+\
+Toggle Rat  \
+All right, Princess continues. I recommend an oil based lubricant which is still thicker and longer lasting than water based lubricants and will not melt the toys. Similarly, using toys with a nonhuman partner it is advisable to use a pthalate free product such as Astro glide. I've never used oil based lubricants. I don't really know anything about them, because I'm dumb.\
+\
+Fausty  \
+But I'm really impressed that you knew how to pronounce pthalate, so you're way ahead of me I would have said patha, path-a-lot-ee or... anyway, you're you're much more sophisticated in these areas and I am mostly -- my concept of lubricant is making somebody really happy and excited and then lubricant happens. So this is all way over my head.\
+\
+Toggle Rat  \
+right, so yeah, um, oil based lubricants probably fine. I don't have any to recommend myself. But your local sex shop will know everything you need to know. If you're--\
+\
+Fausty  \
+Actually, they probably won't know much about -- I was gonna say they, your your local toy shop probably won't know about gel based lubricants. But then again, only a select handful of Zooey folks probably will.\
+\
+Toggle Rat  \
+Use a silly, okay.\
+\
+Toggle Rat  \
+The princess continues, if you were ever interested in talking with a female zoo, I would be happy to be on your show. You may not know me, but I actually wrote the world's first encyclopedia on the subject of Zoo failure, which is currently available for free online when I heard your skit about the CRO Magnon interbreeding with Neanderthals in the disobedience, and made me believe you may have read that portion as many people know about Neanderthals, but few know about the Serbian species by name. A couple things. One, yes, we would like to talk to you as a female zoo, because females are so underrepresented in in any like, like research or media about Zoo files, they just there. We know you there. You're just not represented anywhere. So. And yeah,\
+\
+Fausty  \
+more broadly, having more women participating in the podcast, and in general in the zoo community is something that is healthy on the hundred different levels. So yeah, really glad to have this participation from her and hopefully from others, so that we are not a pure sausage factory. That is not our intent. forward to moving away from that.\
+\
+Toggle Rat  \
+Yeah, heck, yeah. So we would be super interested in having you on. So that'd be great. As far as the encyclopedia goes, we looked online went to Google, we found Wikipedia, a\
+\
+Fausty  \
+good job. Google foo is strong. Founder Wikipedia. Where did you find it? First, I'm taking notes. How do you get there?\
+\
+Toggle Rat  \
+Oh, I typed in exactly PDF z feeling good.\
+\
+Toggle Rat  \
+Anyway, so\
+\
+Toggle Rat  \
+we don't know we don't have a link to send you. We did get a we did find a file version of it that the princess ended up sending us.\
+\
+Fausty  \
+We're not sure it's the best format for the file. So we may be providing it later on in a different format. So that's the thing, there's a there's a little bit of file format modeling taking place with it to make it more friendly to those who are downloading it and a little less heavy with metadata descriptions of stuff that doesn't really need to be described. Also, I have a real hate on about XML right now. So I'm basically stripping everything except a lot of my life. And that includes the encyclopedia, which had XML hiding it and it has to die. And once that's done, we'll probably have a link to post somewhere on the website or Twitter or something like that. For folks who were interested in taking read through. It's,\
+\
+Toggle Rat  \
+I hate to tell you this about Steve, but you know, an RSS feed is just an XML file, right?\
+\
+Fausty  \
+I did not need to hear that right now. Because that may mean that the RSS feed has to go would be inconvenience, but maybe perhaps necessary, given the evils of XML. But I have now reminded myself of after decades of already knowing that, and you should probably just keep me away from the RSS feed for a couple weeks. I'm okay.\
+\
+Toggle Rat  \
+I want to thank you so much, Princess.\
+\
+Fausty  \
+You were fantastic. And we look forward to hearing from you again, we really do. And we appreciate the correction in particular thing we say that is factually untrue, especially stuff that's factually untrue. It really is extraordinarily helpful for folks to reach out and tell us when we're wrong, so that we can correct that. And that is something that makes everything better for everyone involved. And we are grateful every time\
+\
+Toggle Rat  \
+that happens. Yes, yes, I agree. Next up, here's one from the son of a shepherd and a husband of a mayor. First of all, I would like to say, Wow, and a great big thank you for your podcast. I just discovered it today as a member of Zoo Ville, hey, I never knew that such a thing could ever happen. And I'm overjoyed to know that there are others willing to broadcast to our community.\
+\
+Fausty  \
+Oh, right, insert relevant commentary here. You know, I'm thinking about the fact that doing podcasts is really not as challenging as folks might think, even though, in saying that, I recognize that having somebody working with you on the podcast, who knows what they're doing is an enormous help in that regard. You know, despite that fact, I do think that the general concept of a podcast and sharing community engagement and community perspectives via podcasting is something that is common all over the place. And it is surprising when folks assume that Zoo podcasts are unusual, and that there aren't so many out there as would otherwise be expected. And we do hope that changes because it's a neat thing to do. And I think a really healthy thing for the community. And certainly not something that requires a huge level of technical talent or anything else in that regard to especially get up and running and get some experience off the bat. Right,\
+\
+Toggle Rat  \
+I will say is, depending on how often you're doing it, and what kind of content you're doing. It can be a lot of work. But like, you know, it's interesting, I think it's interesting, cuz he's like, you know, I never knew such a thing could happen is what he said. And that is so. So I remember this one time vows to you said to me that there was a point where you were on a gag order, you weren't allowed to like post things online. Already. Maloney was like, Hey, why don't we do a video that's not allowing you like, no, that's impossible. I can't do that. And then you took a step back was like, wait, why can't I do that? Why am I Why am I not allowing myself to do that?\
+\
+Fausty  \
+Right, I'm laughing because looking back at it, it was one of those obvious moments hindsight. And obviously, it was not me that came up with the breakthrough thought here is true to form. It was somebody I know who is actually smart. And this would be Corinne Maloney, the author who wrote a certain book. And while we were sitting and talking about how difficult that was, for her to interview me and publish a book, given that I had a federal gag order that covered not just me, writing myself, but anybody quoting me in any print or electronic format, would be in violation of this gag order, which was quite a\
+\
+Toggle Rat  \
+mind stupid. Bullshit. Yeah,\
+\
+Fausty  \
+you could say that, too. There's a lot of different things you can say about the guy quarter. And we'll just leave it at at a weird constraint that we were struggling with. And she finally pulled the camera out of her bag, essentially, and said, why don't I just do an interview on video? And I was like, No, we can't do that. There's no way this is possible. My hair is not right. And I haven't done my name. And, you know, they realize, Wow, really coming on later. Actually, that was my hair. Not right is one of the excuses I gave it. I had never done it before. And it seems intimidating. And I have no idea the kind of rules of the game for this whole video thing. And it just immediately was like, That's impossible. And it took like five minutes for cream Bologna to explain to me that it was entirely possible, all you have to do is press record. And guess what you have video. There's that thing one's brain does when one realizes that constraint has been in place that is purely internally generated. And sure enough, that's that very day, we made a video we just did a maybe a 10 510 minute interview, where she asked me some questions about the gag order. And I answered, and when we finished and she turned the camera off, I remember looking at her, and she looked at me and I was certainly thinking, Wow, that was really actually kind of easy in a sense. And really neat, because it's a different kind of channel than printed word. It's it's compliment, it adds something it's not, it's not a substitute. But it was a great way to put a face to all these words going back and forth. She posted that video on her blog that she maintained at the time before the book was published. And it was transformative, because people kept writing in and saying it was really neat to see your face. And I was like, Well, yeah, I have a face. I mean, there's not a secret, right. But there's it was different. There was a different kind of engagement, even though it was ad hoc, and my hair was terrible. My nails were not done. And I kind of stumbled and I'm done on a lot, despite or maybe in part because of all that there's a different kind of communication that comes when one has the opportunity to simply speak like a, you know, a primate, like a human to each other in an in a verbal form. And doing this podcast has definitely reinforced that for me. And I certainly hope that others can take advantage of that as well, because it really is a neat tool to have. Right?\
+\
+Toggle Rat  \
+So in other words, like we have this internal a block that says no, we can't there's you can't do voice, your voice can't be anywhere.\
+\
+Toggle Rat  \
+And\
+\
+Toggle Rat  \
+it's interesting that it's so internalized, we just assume it's impossible, but it's not. It's really easy, right?\
+\
+Fausty  \
+There's certainly workarounds, like I mean, my fake voice that I'm using nobody. My voice is actually so much better than this voice. There's it's relatively easy, I would say bordering on just absolutely straight up easy to deal with voice related. I don't want somebody to recognize, you know, my voice for security reasons, which can be legitimate for a lot of folks in the community, right. However, I realized very early and thinking about the podcast, that that really wasn't the constraint, the constraint was was more mental internal, that somehow we don't have the luxury of speaking in our own voice in a more general sort of dairy dot style sense of speaking. And once I realized that that wasn't something that anybody was enforcing on us that that was something I was enforcing. One myself, it became clear that this is one of those barriers that exists only because we recognize it as such and allow it to exist. Right. Once we started working on the podcast, it was pretty straightforward to move forward. And there weren't a lot of roadblocks along the way that made the process particularly difficult. I don't think right now, really, other than deleting the website right back, that\
+\
+Toggle Rat  \
+was a big country.\
+\
+Fausty  \
+But that's not really a podcast issue. That's just a stupid technology administrator issue. And the podcast itself, with a lot of contribution from Toggle, doing amazingly good work behind the scenes, thank you that comes together in a in a smooth way. And in a way that is a product and end product that I think folks find useful and enjoyable, and hopefully is helping others in the community to recognize that they have a voice too. And that that voice and sharing that voice is a critical component of being a healthy community and being healthy within our community. Right.\
+\
+Toggle Rat  \
+Our husband of America continues I to Amazon, don't you don't\
+\
+Fausty  \
+see that coming? I know, right.\
+\
+Toggle Rat  \
+I had a wonderful relationship with a Shetland Mayor for almost 20 years, the love she shared with me was beyond measure.\
+\
+Fausty  \
+That's beautiful. It is it's a bittersweet, because it sounds like that was a relationship that was wonderful, and then ran its biological course. They know how much it hurts to let go of something like that.\
+\
+Toggle Rat  \
+But I'm glad that you had that experience. Because I mean that that is that that is it. That's it. That's what it is\
+\
+Fausty  \
+what it's about.\
+\
+Toggle Rat  \
+I found episode three to be a pleasurable mix of information and humor. Thank you. My only problem has been technical. I have trouble listening to the complete podcast. Now I'm going to reload the page and went over the trouble. Maybe on my end, I'm working to remedy it. Until then please, please, please keep podcasting.\
+\
+Fausty  \
+Yeah, we'll keep our cast and crew promise if this is not part we can do.\
+\
+Toggle Rat  \
+Yeah, as far as the the troubles, it probably was because episode three was originally uploaded on Zoo WTF. And for some reason, we have this weird bottleneck where at some point, it just stops loading the file. That should be fixed now because we're hosting it from another site. So if anyone else is still having trouble loading, loading the whole thing, let us know. Otherwise, it should be good.\
+\
+Fausty  \
+Yeah, if you if you are loading an episode of the podcast, especially one of the longer episodes, that goes over about 120 megabytes, and it cuts off, it is not a problem on your end, that is an issue that is a known thing. I do believe that we have put that bug to bed at this point. The it does pop up now and again, when I'm stupid and forget the solution that I came up with the last episode. So if you see that happen, drop us a note so that we can stamp that out. If you are extraordinarily bored and have nothing else to do in your life, you could also email for a technical explanation of why that is taking place. And I am happy to share that with you it will put you to sleep because it really is that boring. And the long, the short answer is we just have to post the podcast files that are bigger than 120 megabytes of someplace else. So that that things don't happen. And that's it. That's it.\
+\
+Toggle Rat  \
+So thank you very much husband of a mayor, we loved hearing from you. And we're so glad that you had that experience and that you enjoy the podcast. I\
+\
+Fausty  \
+agree. those notes, especially from folks who obviously have been in the community for a while, and shared the kinds of relationships that some of us have been so fortunate to have in our lives. those comments and suggestions and encouragement, emails are really need to receive because I think that's the type of impact we're hoping to have. It makes us feel like we're not always missing and some of what we are doing is contributing value. And that's a neat feeling. And I'm really grateful when folks take the time to sure that\
+\
+Toggle Rat  \
+all right, we have a very long an excellent email from desert Rat, kindred spirit, no doubt. This is one of the older ones we haven't gotten the chance to get to yet. And so we're going to give you the highlights. Desert Rat writes, in during the podcast so far, the commercials are great, and would be something I would expect to see in here on TV or radio, or TV or the radio if the world ever accepted us zoos instead of persecuting us. So yeah, that's that's kind of the format.\
+\
+Fausty  \
+We have, we have fun putting together all of the pieces of these podcasts. Yeah, even when things crashing don't work. There's usually somewhere along the line laughter. However, the advertisement and the sponsors, I would say, at least for me, personally, probably the most fun to have all of you and the end result is the most subversive of everything we're doing. And it's always nice to see other people appreciate that. Because, yeah, there, they are so much fun. And we have a lot more queued up to come. I will say that when we have team meetings and brainstorm on it, we keep lists of notes of the future of commercials and advertisements and sponsors, and we have some great ones coming down the pipeline is something that seems to get better with time, he continues,\
+\
+Toggle Rat  \
+I too, am happy that beast form is gone. I were banned from beast form as a badge of honor, as do many others. There was a place that was just filled with those who only cared if they can swipe user's materials to make a buck. So when I first learned that others existed, joining the internet closely at around the time of the mr. hands, and I was wanted to be for him. It was my first for him. I never felt much companionship there. Or they even fit in there. Too many where they're just looking for an animal to fuck. And again, I mean, yeah, go ahead.\
+\
+Fausty  \
+What's interesting to me is how quickly and in a good sense, these forum is fading from the dialogue. Two months ago, you know, before I'm going down, and the post these forum questions, were something that seemed front and center in a way that was hard to imagine that wouldn't be true. And yet a couple months later, Beast forum. Yeah, we all kind of remember that nasty thing that happened. And now it's gone. And life goes on. And I really feel great about that. And it's nice to see that there is a future that doesn't include that and that that future is more than happy to take place. And it took place a lot quicker than maybe some of us would have suspected or or feared along the way.\
+\
+Toggle Rat  \
+Like I said on episode one. Fucking\
+\
+Fausty  \
+speaking of the Mr. Hands incident, of course, there was a Trump certain troll and actual human troll last fall on Twitter, who was convinced that that I personally am Mr. Hands, which How is odd how on a whole bunch of different levels? Right? No offense intended, like zombies. Right, and I'm not laughing at you know, anybody who has died in this. You know, disrespect and laughing in that regards. I will say that one has to laugh at the absurdity of it's because this individual was trying to get me to go on a radio show type deal. convinced I was Mr. Hands to ask me questions about the incident. And I had offered to do that. And I said that I was going to bring along a number of other historical figures. I think Frederick Nietzsche was one of them who was with me on the on the show, and he was a little baffled by the other, you know, people that I was going to bring, but didn't really recognize any of their names, and was like, Okay, cool. You can bring your friends along, if you want. That was like, wow, yeah, we're really deep in the bucket here. Yeah. So anyway, I have actually gotten mr. hands, because technically, you know, in a very precise sense, he is deceased. And at this point, as far as I know, I am not. And that doesn't mean we are distinct individually. No, I rumors the contrary, No, I am not he and I can confirm that the story around what happened there is perhaps more complicated than a lot of folks see on the surface. And maybe sometime in the future on the podcast, if there's interest, we can maybe do a little bit of unpacking of that historical reality. But in the meantime, we can all be happy that these forum is gone. Goodbye and good written suck and\
+\
+Toggle Rat  \
+desert continues, I was hoping that Zoo bell would be better. But so far, it's more the same as peace from the at this point is beast forums annoying in the brother, hopefully it will grow into it and not just the clone, it was surprising that other so many great forms that have come and gone that beast form would have stood the longest. So I wanted to keep this here. Because, again, this is an older email. And it's true that we got a lot of people coming in, and like, you know, emailing us about Zoo bell. And so that's why we wanted to take the time during our interview with z on the last episode to really go in on this beast form issue like, how is Zoo bill setting itself apart from before him. So I hope that if you're listening now you have listened to that episode and can make your choice that\
+\
+Fausty  \
+way. That's true. This note from desert Rat did come in, I believe, several months ago. And we just haven't had the opportunity to take time in the podcast to go through it. It I think reflects the concern that so many of us had, particularly early on that Zhou veil was in fact going to be nothing more than a beast forum clone. I think the that we have seen progress in the intervening months, at least that gives many of us hope that that is not what is happening. And it is quite possible that we will see something vastly healthier and more constructive coming with Louisville than anybody ever saw it before. Great.\
+\
+Toggle Rat  \
+So that's our hope I just want to leave them there because, you know, taking out seems disingenuous since the last thing we did was kind of like talk about Zoo bell on the podcast so every night so does Rat continues though peace forum was my first forum, I quickly abandoned it for elite to it was an elite su that I found others like me, and my first long term friends, easy was filled with many who truly loved animals not just looking for a quick fuck. It was in this form that I would come to accept myself for the zoo that I am today. Sure, I knew that people had sex with animals before I found the internet. Hey, my farm kid after all, but I didn't know any loved animals as humans love their significant other, I can say that I have to be one of the few out there that was not the sex aspect of this life. That messed me up. But the fact that I can love an animal like that the friends that I made in easy helped me come to terms with myself and show me that I was not alone. You know, when you say that, you'd be the only one. But even that emotional connection is extremely taboo. Treating animals as equals is really the great prime of Zoo files. The sex is just the most egregious display of that equality.\
+\
+Fausty  \
+I would say I would absolutely agree with that summary. And I think those three sentences right there compress a huge amount of wisdom into a small space.\
+\
+Toggle Rat  \
+Thank you.\
+\
+Fausty  \
+There are a few forums left now, you worth the time and effort to join and put the time in. Certainly most are not very active. But this could be due to the fact that many of us have moved on to telegram or Twitter, even though such places can offer camaraderie and friendships. They are not without their own dangerous as we all saw with the Kiro incident, boy. So this was actually in response to Episode Two, where we talked about hero and all that stuff. So I think it's interesting to look back over the last 20 or so years. And the role that Zoo forums have played in the community. There have been phases, and particular forums like easy that for particular periods of time, had an extraordinarily important and often very positive impact on the community. Unfortunately, it seems almost structurally inherent in these forums, that there would be a time when that phase of healthy engagement would come into decline. And various problems would arise, eventually a new form would come to replace the old form. I don't know that that dynamic really continues. Now, as Toggle says a lot of that energy, and engagement has moved on to other platforms. I would say overall, that's nothing but can't be anything but healthy. I think the diversity of platforms that nowadays provides an openness of communication that is not constrained and controlled by administrators, or individual administrators that really does provide a much more positive and an open ended venue for a much more diverse group of community members to participate within the old forum model. Yes, yes, I can understand that.\
+\
+Toggle Rat  \
+I mean, there's something to be said for forums. Obviously, I think forums are good, because they allow you to really easily find like, Oh, I'm in a forum of people that have this thing in common with me. Whereas on Twitter, it's like, oh, god, I'm being thrown to the sharks here. I don't know who anyone is. I can't trust anyone. I mean, at this point, sometimes it's just like, I can't trust anyone true. And so forums still have that kind of safe, safe place feeling like so people that are investing in time and posting there is a different sort of investment, then Twitter.\
+\
+Fausty  \
+I'll say personally, that there was a time period back in the 2003 2004. Era, when a number of Zoo forums existed, but were run as secret invite only, I used to refer to them pejoratively as honeycomb hideout. These little groups of self appointed elites, which that word eventually pops back up, would create these closed forums that only they had access to, and claim that they were the core of the zoo community that got weird and ugly, and dangerous in its own way. Yes, they were all zoos. However, the energies and politics of what happened in those closed Zoo only exclusively Zoo environments could turn just as rancid as some of what happens on Twitter. So I think it's always a balance between the two.\
+\
+Toggle Rat  \
+Right? It makes sense. Alright, so this would read continues. Now don't get me wrong, Zeus atheists are the scum of the earth and I would love to shoot them in the head given the chance. Okay, well, buddy,\
+\
+Fausty  \
+you speaking metaphorically, obviously.\
+\
+Toggle Rat  \
+Yeah, obviously, metaphorically, we're not actually going to shoot anyone.\
+\
+Toggle Rat  \
+I have worked with more than one person who has helped neutralize the sick, twisted Fox. This was all done quietly. And more often than not most people never knew. Unlike the public's done on Twitter that did no good and just drove more good news into hiding. The so called evidence against here on the others was suspect. Those who did the leaks vanished before they could be questioned. And it said not only the zoo community at each other's throats, but also the fairy community as well.\
+\
+Fausty  \
+That sums it up pretty well. Yeah, exactly. That's exactly what happened. Yeah, that would mean and now that we all know, so much more, more than we ever wanted to know about how that happened last year, and what and why they did it to a degree that really does just summarize exactly the catastrophe of last fall's incident on Twitter. And it can certainly confirm what does it Rat is saying about the historical tradition in the community of, let's see how he phrases this, more than one person who has helped neutralize these sick, twisted, folks, this was all done quietly. And more often than not, most people never knew. That is exactly right. And that has always been the model that I understood and participated in. And I think that we're now looking for an integration of that model with more public platform based model. What happened last fall was exactly the opposite, seemed to borrow the worst of all worlds, and really did nothing to make good things happen and caused a lot of damage to a lot of people that probably shouldn't have had any damage whatsoever,\
+\
+Toggle Rat  \
+and also caused a lot of damage to the zoo community on Twitter, it will tell you that right now. Like that's true, like just destroyed, it was real. I was seeing the same way like, you talk about how it goes. And then Randy Pepe, he would he liked him and just like, changed the whole territory when he came and started doing this stuff. I feel like and again, this is why I left Twitter earlier this year. Like the whole terrain changed. And like, it doesn't feel like the same place anymore.\
+\
+Fausty  \
+There was a poisoning of the well, that occurred in that September, Zoo, sadism, so called Zoo sadism publication that happened on Twitter. And the the intentional and clearly articulated efforts to link zoos and Zoo families and the zoo community to torture and sadism was successful, and was something that was unquestionably looking back on the evidence from what we know now. A big part of the initial effort itself. And that linking of us with torture was and continues to be so damaging, and destructive, and did drive a lot of Zoos away from Twitter entirely. It drove some furries some well meaning furries into anti Zoo positions, because of their understanding based on what was published and repeated and often lied about during last fall that zoos were torturers period, they wanted the same there's that there weren't two groups, there's just one group two different names. And there are some well meaning people who simply saw enough of that repeated enough times and just assume that that's true, right? And that is so toxic, really and destructive. And really did make, I think, a qualitative shift in some of the dialogue that we see in, especially on to Twitter, and certainly not for the better.\
+\
+Toggle Rat  \
+No.\
+\
+Toggle Rat  \
+So this next part kind of talks a little bit for that. So just a Rat continues. I was one of the people who look into the evidence, logs, videos, pictures, nothing in it linked, directly linked hero disease, sadism, face and body pics and video were quickly proven not to be him. For those of us who logically looked at the evidence, there is still not enough I bleach in the world to wash with the horrors of video and pictures we had to look at. Yet by then the mob mentality of if your defenders support them, it makes you one of them and already taken hold. In the end, the evidence did not prove that Kira was such a sick free. And while he was not the only one named in the leak, he was the one most focused on by it. Some wrongly lumped The so called evidence against others as stuff that Carol did. Again, when it was pointing out this was incorrect. The mob roast and outrage and drowned out logic and reason. Kira was also the only one to my knowledge to defend themselves against the accusations that pissed off the mob. Or how dare you to kingdoms up against the lies of the monolith already found them again? Guilty of?\
+\
+Toggle Rat  \
+Yeah, that's basically that's basically what happened. Yeah.\
+\
+Fausty  \
+Wow. Yeah. That again, really kind of hits the nail on the head, I suppose all I can add to that is the profound discussed, really veering into rage for me personally, that this misdirection of focus and attention on hero, which was intentional, we now know by individuals involved in that league, right? Many of whom have told us point blank that that was what their intention was. That it absolutely shielded from visibility, and from accountability. Individuals doing horrific, disgusting, indescribable things to animals, and the effort and attention and, and noise that all got focused on hero who was not one of those people we all now know. Though he did hang around, some of them he did not participate in those activities directly helped those torturing disgusting, useless pieces of shit to continue doing what they were doing. Everybody that got sucked into this Kiro thing, directly or indirectly, intentionally or not, was helping to cover for people who do actually torture animals to death for fun. And that makes me so angry to this day that I really will never be at peace with the consequence. Of course the consequences to Kiro terrible, and being falsely labeled like that terrible and taking nothing away from them for what he's been through. However, I also look at the damage to the victims in those videos that some of us have had to watch.\
+\
+Toggle Rat  \
+I do not, I do not even know.\
+\
+Toggle Rat  \
+I was just saying I don't I don't. I'm so sorry for anyone who had to actually sit down and watch those because, man, it's it's,\
+\
+Fausty  \
+it's I'm sorry, I'm sorry that we watch those and know that our inability to bring those people to task last fall means that more of the actions that are depicted in those videos continued over the winter. That's right. That's what actually before Yeah, yeah. Because that's real. And if, if, and the victims in those videos who suffered through the horrors that are captured in those videos, that there were more victims and more horrors that that were suffered directly because of this stupid political bullshit that got pointed at Kiro by people who knew there were real torturers, torturing dogs to death going on behind the scenes and for whatever reasons, they have decided that political games with Kiro on YouTube were more important than that. And that allowed those torturers to continue doing what they were doing for more than six months, longer than should have happened. And that will always be rage me. And I do not believe that is forgivable. And I will always look at the hero incidents as a classic example of stupid human politics getting in the way of something that actually matters, right? And actual abuse that needed to be stopped immediately. And wasn't. Because we got spun up in dumb arguments over stupid shit on Twitter, that doesn't really matter. And that is something that I will never do. Okay,\
+\
+Toggle Rat  \
+right. I agree. Hey, dessert ends here. Anyway, keep doing what you're doing. And maybe just maybe it can help someone, maybe we can change minds that we are not evil, mentally ill people who need to be killed. Here's the hope.\
+\
+Fausty  \
+Here is told us to\
+\
+Toggle Rat  \
+hope but before that was just funny, because it's like, it doesn't sound very hopeful at all.\
+\
+Fausty  \
+True hope that is built on a foundation of objective awareness of how tough things can be right? I think that desert Rat opens the door to an important critical component of being a community that is respected and acknowledged as a healthy part of the human spectrum, right. And that is for us to behave as a healthy and respected part of the human spirit. If you want people to think that you're healthy, and do good things, and participate in good ways, and the world around you do good things and participate in good ways in the world around you. I mean, that seems self evident. And yet, it is useful to remind ourselves that the core component of convincing somebody that we are good is for us to be good rent, that the acknowledgement internally, that we are good, and that often in our own family lives we are unambiguously good is of course, a big part of that foundation. A doing a larger good, sometimes also more visible good, can only help to integrate our community more broadly. And doing good work will always be a good choice and will make the world a better place along the way. It's self evident that doing that is an important part of having the community itself achieve more healthy integration with the rest of human society. Right. Agree.\
+\
+Toggle Rat  \
+All right, we have one more email that I just got permission to read on air. So big thank you to barely tame for this email. Barely rates. Hey, just wanted to say I love the podcast and finding out about it a few days ago. Ever since I was young, I knew I was different. And apparently I was a zoom. Sometimes they get depressed knowing that I was different from everybody else. to any of you feel the same. You know, there was a time when I was definitely depressed and ashamed about my sexuality. Interestingly, I never had issues with consent, because that paradigm did not exist when I was growing up, like no one ever questioned whether or not a doc consent back then my struggle was entirely religious. And I kind of like bargain with God a lot. Like Like, you know, look, if he if he do this thing for me, I'll stop playing around with a dog. But\
+\
+Toggle Rat  \
+with things like this, you know, it doesn't really work that way. So at some point\
+\
+Toggle Rat  \
+a bit after I went to college, I realized that I needed to come to terms with my sexuality. And that wasn't always easy. Because you realize that holy shit, I have to be careful with who I share this part of myself with. And you hear your friends or people you respect and talk about your sexuality, like, like your shit, without even realizing that one of their friends can be a zoo file or never even considering that maybe someone in the room could be affected by that stuff. But I also remember that sort of thing happening when I was younger, about gay people. So I remember people talking about being gay, like it was disgusting. And I was sitting there gay as can be unable to say anything because I was ashamed.\
+\
+Fausty  \
+In fact, Toggle is Toggle is in fact gay as a tree full of parents,\
+\
+Toggle Rat  \
+free full and bear.\
+\
+Toggle Rat  \
+But you know, I think the key to overcoming that is, is really is community, you really need to know that you're not alone, and that you're not broken, that you're not an abomination. And you need people to be there to support you in that before you can internalize it. And barely, I hope there will come a time in your life where you realize I'm different. And that's not only Okay, it's important\
+\
+Fausty  \
+to be celebrated. Yep.\
+\
+Toggle Rat  \
+The world really does need people like us. Because we have a different perspective and empathy when it comes to human sexuality and animal welfare. We look at animals and we see something more than food or livestock or what lower beings, we see an independent, autonomous creature that's attractive, and alive. We see so much more than the world at large, we see their importance and their value, and the worth. And we bond with them on equal footing. And we need that perspective in the world. That's so anti animal autonomy. So anyway, the point is, so yeah, there there are times where we should wear earrings. And, you know, I just like human females like ours is supposed to do. And I didn't have to think about hard questions or fight for my own right to exist. But having to do those things have shaped the person I am and I am really proud of the person I become our hardships to find the person we become. And they give us the emotional tools that we need to relate to other people going through unique struggles of identity and persecution. So you're different.\
+\
+Toggle Rat  \
+And that's not only Okay, it's important. Well,\
+\
+Fausty  \
+I'm not sure I have anything constructive to add to that. That is a an extraordinarily one point and appropriate response to thank you, concerns brought up in that email, I feel an ancient gray muscle in that I also look back and my coming of age, there's a book that has a lot of these details in it. So I will spare listeners the details given that they are available in in print form. However, in that era, as Toggle says gay folks were treated so horribly, exactly the way somebody who was Zooey would be categorized, I didn't in the place and time I grew up, those would be the same bucket fundamentally, right. And I looked around at my gay friends, and saw them struggling with their identity and their sexuality. And the degree of if that society hated them, for no legitimate reason, whatsoever, none just none, just complete, total bullshit. And I looked at myself, and I looked at my partners and the amazing creatures that were part of my physical coming of age in those years, and thought, yeah, we're kind of walking the same road in that we have to be careful, because the world at large seems to hate some people about their sexuality for completely arbitrary, totally absurd reasons. And that's just one of those things. And in a sense, that was a healthy environment to grow up in because it was never coated in this new era. False patina of Oh, we're trying to respect quote, respect the animals by heating zoos. Also, we're going to castrate them and do other terrible things to them along the way, which is a little odd to square with respecting them, and hating zoos. And yet I think this current toxic re emerging of Zoo hatred that folks nowadays are growing up with has to be very difficult to, to come of age facing, I did not come of age in that era long was an adult, by the time that new branding of Zoo hatred was floated, and picked up and taken as a given. And I know that must be challenging. The flip side is I know that the community and the younger folks coming of age in the community will find healthy, constructive, successful ways to overcome those challenges, because we always have and that has been what has kept us as a part of human society for thousands of years.\
+\
+Toggle Rat  \
+Thank you so much barely, like we really appreciate you reaching out. And we hope that you know, what we have to say is is helpful. There are a couple of other emails we love to share with you. But they are Marcus private, like, like we said, always under your quest with regards to privacy when you're right in,\
+\
+Fausty  \
+so keep them coming. The private emails are neat. And even though we don't have the opportunities to specifically share and quote from them and the podcasts, I think Toggle would agree that the private emails are always reflecting indirectly, in our thinking and in the topics that we're covering. And we are grateful for those emails just as much as we are for the ones that were able to read publicly, you\
+\
+Toggle Rat  \
+would agree. Alright, so that's all our emails, fancy. What's next on the back end?\
+\
+Fausty  \
+One thing we've talked about doing in the podcast since before the first episode, was finding a way to honor the loved ones in our lives that so many of us have lost. The lifespan that we have, and the lifespan of our partners is a reality that hits those of us who have been around a while, in the most profound possible ways. My idea, and I think toggles sharing that idea. Our idea here at the podcast, is to accept eulogies from listeners for loved ones who are no longer with us. And if possible eulogies that we're able to read on the air and share on the podcast. If you have a partner you have lost, and you have words to share about them that you feel comfortable sharing in whatever constraints of detail you can or cannot include in the eulogy, please send them to us use the form on the website, or any of our email addresses that are available, we would really love to share some of those thoughts with listeners, I know that I myself have a number of such eulogies. Often pages in length, saved off on my own hard drives that I've earned and look at, for the pain that comes from those memories. But also the beauty that comes from those memories. Our animal companions are such a significant part of our lives as moves more so than anybody else they are, the simple truth is that it is often the case that their lives are shared with us from beginning to end. And yet our lives as longer lived humans go on without them. The process of learning how to live with those losses in a healthy way. And learning how to prevent those losses from eating us up from the inside out, I think is critical to our health as individuals and as a community, we really do want to find ways to honor our partners or lost partners in honor the ways they've enriched our lives, and all the things we've learned from them. So if you have a eulogy to share, and you're comfortable with that being shared on the podcast, please do send it along. We would like to include those in future episodes. And we will see how that evolves. And what comes of that as we go. I think that we may find new ways and new opportunities, celebrate those lost loved ones. And I believe that the start of that is to begin with our eulogies. And to see what comes from there.\
+\
+Toggle Rat  \
+So like you said, If you guys have any eulogies, go to the zoo, WTF? and fill out the form and just put the subject eulogy up at the top and wonder what's going on. Is there anything else you wanted to say pasty? I think\
+\
+Fausty  \
+that's more than I have said lots of things. My my saying has been noteworthy in this episode. Shorter, hasn't been said, right.\
+\
+Toggle Rat  \
+This is what happens when we go up. But we don't have a script. We just talk and\
+\
+Fausty  \
+it is a podcast. It's not entirely inappropriate, given that it is a cast of pods in the sense of human beings using human language to discuss human topics. So I think we're too far pocket on that. But two things. Yes, we will. We will continue here to our full moon episode, which as many listeners have noted, seems to have evolved to where our full moon episodes are a bit more formal and structured, and include more of the individual sub components that are characteristic of what has become busier than their podcast, and that are off Full Moon New Moon episodes are a bit more freeform, and experimental. And we are allowing that to evolve. And I think that it has been a neat opportunity so far, to try things that we really wouldn't put in the main podcast and keep that creative energy coming in. Particularly that creative energy that's coming in from email and other suggestions from the community.\
+\
+Toggle Rat  \
+I really had fun tonight so this is a lot of fun.\
+\
+Fausty  \
+Yeah, sometimes you sit around bullshitting can be fun and hopefully it is enjoyable to the listeners as well. I think that there's bits and pieces in there that will be useful and I believe that we we'll hear interesting feedback from listeners on the on the format, the new moon format, maybe some will like it somewhat like it. You know, maybe others will much more like the structured full moon. I don't know. I think we'll just kind of play it by ear and see what happens.\
+\
+Toggle Rat  \
+Let us know what you think. Go ahead. Do you kick us out?\
+\
+Fausty  \
+Well, thanks again friends for sharing your time with us here at to the now\
+\
+Toggle Rat  \
+you can subscribe to the podcast for your RSS feed. Just put your favorite podcast claim at RSS that Zoo WTF.\
+\
+Fausty  \
+and off you go. It's not XML. It's RSS or podcast website is Yep. WTF and it's even got current backups now. Twitter account at to the now and you can follow suis naughty advice directly on twitter at ask zoom\
+\
+Toggle Rat  \
+reminder that we have a forum that enables anonymous submissions for the podcast on our website Zoo that WTF. You can ask us about the weather in Pennsylvania. That's freaking fasting out right now. Asked Zoo about animal Kama Sutra positions or tell us our podcast sucks and that you can do better. You can\
+\
+Fausty  \
+also contact co host LC through his website hosting.org or you can pass a handwritten note to that one homeroom teacher and he sure to get it eventually\
+\
+Toggle Rat  \
+now isn't trademarked and you can share with anyone you want. Even your tax accountant,\
+\
+Fausty  \
+all non humans who helped make this podcast happen that definitively have the consent of their human partners and whatever anybody else says. They do believe that humans can consent\
+\
+Toggle Rat  \
+stallions Heather Redick dreams almost every night. Don't believe it. Ask a\
+\
+Toggle Rat  \
+stallion Just don't be surprised\
+\
+Toggle Rat  \
+when things get steamy. Be nice to each other.\
+\
+Fausty  \
+It's the sexiest serious thing you can do. as Charles Kingsley, you forever reminds us it is only the great hearted who can be true friends\
+\
+Toggle Rat  \
+instead of playing at those zoos.\
+\
+Toggle Rat  \
+Let's see you next time when you feel like howling at the moon.\
+\
+Transcribed by https://otter.ai\
+}
